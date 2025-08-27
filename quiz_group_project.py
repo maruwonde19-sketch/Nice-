@@ -270,3 +270,207 @@ elif mark >= 10:
 else:
      mark <= 5
      print(f"{mark}/25,Failed")
+############ developed by aryam
+# Instructions: Choose the best answer for each question
+
+Q1=""" Which of the following is the basic structural and functional unit of life?
+  a. Organ
+  b. Tissue
+  c. Cell
+  d. Organ System"""
+
+Q2=""" What process do plants use to convert light energy into chemical energy?
+  a. Respiration
+  b. Photosynthesis
+  c. Transpiration
+  d. Fermentation"""
+
+Q3=""" Which biomolecule primarily stores genetic information in living organisms?
+  a. Proteins
+  b. Lipids
+  c. Carbohydrates
+  d. Nucleic Acids"""
+
+Q4=""" What is the name for the process of cell division that creates gametes (sex cells)?
+  a. Mitosis
+  b. Meiosis
+  c. Binary Fission
+  d. Budding"""
+
+Q5=""" What is the term for a group of organisms that can interbreed and produce fertile offspring?
+  a. Population
+  b. Community
+  c. Ecosystem
+  d. Species"""
+
+Q6=""" What is the smallest particle of an element that retains the properties of that element?
+  a. Molecule
+  b. Compound
+  c. Atom
+  d. Ion"""
+
+Q7=""" What type of chemical bond involves the sharing of electrons between atoms?
+  a. Ionic Bond
+  b. Covalent Bond
+  c. Metallic Bond
+  d. Hydrogen Bond"""
+
+Q8=""" What is the chemical formula for water?
+  a. CO2
+  b. NaCl
+  c. H2O
+  d. O2"""
+
+Q9=""" What is the process called when a substance changes directly from a solid to a gas?
+  a. Melting
+  b. Condensation
+  c. Sublimation
+  d. Evaporation"""
+
+Q10=""" What is the measure of the acidity or alkalinity of a solution called?
+  a. Volume
+  b. Density
+  c. pH
+  d. Temperature"""
+
+# Physics (Questions 11-15)
+
+Q11=""" What is the SI unit of force?
+  a. Watt
+  b. Joule
+  c. Newton
+  d. Pascal"""
+
+Q12=""" What is the phenomenon called when a wave bends as it passes from one medium to another?
+  a. Reflection
+  b. Refraction
+  c. Diffraction
+  d. Interference"""
+
+Q13=""" What type of energy is associated with the motion of objects?
+  a. Potential Energy
+  b. Kinetic Energy
+  c. Chemical Energy
+  d. Nuclear Energy"""
+
+Q14=""" What is the name for the flow of electric charge?
+  a. Voltage
+  b. Resistance
+  c. Current
+  d. Power"""
+
+Q15=""" What is the speed of light in a vacuum?
+  a. 3.0 x 10^8 m/s
+  b. 1.0 x 10^8 m/s
+  c. 3.0 x 10^5 m/s
+  d. 3.0 x 10^10 m/s"""
+
+# Math (Questions 16-20)
+
+Q16=""" What is the value of pi (π) to two decimal places?
+  a. 3.16
+  b. 3.14
+  c. 3.20
+  d. 3.00"""
+
+Q17=""" What is the area of a circle with a radius of 5 units? (Use π = 3.14)
+  a. 25 units squared
+  b. 15.7 units squared
+  c. 78.5 units squared
+
+  d. 31.4 units squared"""
+
+Q18=""" What is the square root of 144?
+  a. 10
+  b. 12
+  c. 14
+  d. 16"""
+
+Q19=""" Solve for x: 2x + 5 = 11
+  a. 2
+  b. 3
+  c. 4
+  d. 5"""
+
+Q20=""" What is 6! (6 factorial) equal to?
+  a. 15
+  b. 25
+  c. 720
+  d. 625"""
+
+# English (Questions 21-25)
+
+Q21=""" Which of the following is a synonym for "happy"?
+  a. Sad
+  b. Angry
+  c. Joyful
+  d. Tired"""
+
+Q22=""" Which of the following is a noun?
+  a. Run
+  b. Tree
+  c. Quickly
+  d. Beautiful"""
+
+Q23=""" Which sentence is grammatically correct?
+  a. I is going to the store.
+  b. I are going to the store.
+  c. I am going to the store.
+  d. Me going to the store."""
+
+Q24=""" What is the plural form of "child"?
+  a. Childs
+  b. Childes
+  c. Children
+  d. Child"""
+
+Q25=""" Which literary device involves using an object or idea to represent something else?
+  a. Metaphor
+  b. Simile
+  c. Symbolism
+  d. Personification"""
+
+questions = {Q1:'c', Q2:'b', Q3:'d', Q4:'b',
+             Q5:'d', Q6:'c', Q7:'b', Q8:'c', Q9:'c', Q10:'c',
+             Q11:'c', Q12:'b', Q13:'b', Q14:'c', Q15:'a',
+             Q16:'b', Q17:'c', Q18:'b', Q19:'b', Q20:'c',
+             Q21:'c', Q22:'b', Q23:'c', Q24:'c', Q25:'c'
+            }
+
+name = input("enter your full name: ")  # Added a closing parenthesis
+print(f"dear {name}")  # Added f-string
+print("please read the following instructions:")  # Corrected spelling
+print("instraction1: do not forget to write your full name")  # Corrected spelling
+print("instraction 2: cheating with nullify your total result ")  # Corrected spelling
+
+mark = 0
+# Corrected logic with questions and added input function
+for question in questions:
+    print(question)
+    answer = input("Enter your answer (a, b, c, or d): ").lower()  # take the input
+
+    if answer == questions[question]:  # comparing
+        mark = mark + 1  # addition
+        print("Correct!")
+    else:
+        print("Incorrect!")
+
+# Calculate the percentage
+percentage = (mark / len(questions)) * 100
+
+# Determine the grade category
+if percentage >= 18:
+    grade = "Excellent"
+elif percentage >= 15:
+    grade = "Very Good"
+elif percentage >= 12:
+    grade = "Good"
+elif percentage >= 10:
+    grade = "Satisfactory"
+else:
+    grade = "Failed"
+
+# printing the final mark and grade
+print(f"{name}, your final mark is {mark} out of {len(questions)}.")
+print(f"Percentage: {percentage:.2f}%")  # Display percentage with two decimal places
+print(f"Grade: {grade}")
